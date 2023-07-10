@@ -73,7 +73,7 @@ const Page: React.FC = () => {
           <textarea
             id='message'
             className='w-full p-2 border rounded'
-            rows='4'
+            rows={4}
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           ></textarea>
