@@ -1,5 +1,7 @@
+'use client';
 import Link from 'next/link';
 import Image from 'next/image';
+import { use } from 'react';
 
 interface Post {
   title: string;
@@ -50,8 +52,8 @@ const getPosts = async (): Promise<Post[]> => {
   }
 };
 
-const Blog: React.FC = async () => {
-  const posts = await getPosts();
+const Blog: React.FC = () => {
+  const posts = use(getPosts());
 
   return (
     <div className='container mx-auto p-4'>
