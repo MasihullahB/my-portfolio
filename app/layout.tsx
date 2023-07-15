@@ -28,6 +28,8 @@ export const metadata: Metadata = {
     'follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large',
   icons: {
     icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+    shortcut: '/favicon.ico',
   },
   keywords: [
     'Masihullah Budye',

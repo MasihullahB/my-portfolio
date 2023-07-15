@@ -3,7 +3,7 @@ import ProjectCard from '../components/ProjectCard';
 const Page: React.FC = () => (
   <div className='container mx-auto p-4'>
     <h1 className='text-2xl font-bold mb-4'>My Projects</h1>
-    <div className='transform transition duration-500 hover:scale-105'>
+    {/* <div className='hover:scale-105 transition duration-500'>
       <ProjectCard
         title='React SharePoint Applications'
         description='Description about this project...'
@@ -12,7 +12,7 @@ const Page: React.FC = () => (
         codeLink='Link to the GitHub code'
       />
     </div>
-    <div className='transform transition duration-500 hover:scale-105'>
+    <div className='hover:scale-105 transition duration-500'>
       <ProjectCard
         title='React Frontend and MERN FullStack Applications'
         description='Completed a number of personal projects to improve my skills in React frontend and MERN FullStack development.'
@@ -20,7 +20,11 @@ const Page: React.FC = () => (
         link='[Link to the hosted applications]'
         codeLink='[Link to your GitHub repository]'
       />
-    </div>
+    </div> */}
+    {/* <p className='text-lg text-gray-400'>To be added soon!</p> */}
+    <p className='text-lg text-gray-400'>
+      Under construction........ but it&apos;ll be worth the wait!
+    </p>
   </div>
 );
 
