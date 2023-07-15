@@ -5,7 +5,7 @@ import SocialIcon from '../components/SocialIcon';
 
 const Page: React.FC = () => {
   const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
+  // const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
   const socials = [
@@ -30,18 +30,22 @@ const Page: React.FC = () => {
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const mailtoLink = `mailto:masihullah.ib@gmail.com?subject=Contact from ${name} ${email}&body=${message}`;
+    // const mailtoLink = `mailto:masihullah.ib@gmail.com?subject=Contact from ${name} ${email}&body=${message}`;
+    const mailtoLink = `mailto:masihullah.ib@gmail.com?subject=Contact from ${name}&body=${message}`;
     window.location.href = mailtoLink;
   };
 
   return (
     <section className='py-10'>
       <h1 className='text-4xl font-bold text-center'>Contact</h1>
-      <p className='mt-4'>
+      <p className='w-full md:w-1/3 mx-auto mt-4'>
         I&apos;m looking forward to hearing from you! If you&apos;d like to get
         in touch, please use the form below.
       </p>
-      <form className='mt-6' onSubmit={handleFormSubmit}>
+      <form
+        className='w-full md:w-1/3 mx-auto mt-6'
+        onSubmit={handleFormSubmit}
+      >
         <div className='mb-4'>
           <label htmlFor='name' className='block mb-2'>
             Name
@@ -49,30 +53,30 @@ const Page: React.FC = () => {
           <input
             type='text'
             id='name'
-            className='w-full p-2 border rounded'
+            className='w-full p-2 border rounded text-black'
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
         </div>
-        <div className='mb-4'>
+        {/* <div className='mb-4'>
           <label htmlFor='email' className='block mb-2'>
             Email
           </label>
           <input
             type='email'
             id='email'
-            className='w-full p-2 border rounded'
+            className='w-full p-2 border rounded text-black'
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-        </div>
+        </div> */}
         <div className='mb-4'>
           <label htmlFor='message' className='block mb-2'>
             Message
           </label>
           <textarea
             id='message'
-            className='w-full p-2 border rounded'
+            className='w-full p-2 border rounded text-black'
             rows={4}
             value={message}
             onChange={(e) => setMessage(e.target.value)}
